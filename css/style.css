@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background: #ebebeb;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    max-width: 340px;
+    padding: 0 10px;
+  }
+}
+
+/* Header */
+
+.header {
+  padding: 40px 0;
+  height: 250px;
+  background: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: #fff;
+}
+
+.add-noticia {
+  padding: 10px 30px;
+  font-size: 0.875em;
+  font-weight: 600;
+  font-style: italic;
+  cursor: pointer;
+  border: 2px solid #332b00;
+  border-radius: 5px;
+  box-shadow: 5px 4px 0px -1px #332b00;
+  transition: 0.3s;
+}
+
+.add-noticia:hover {
+  background: #fff;
+}
+
+.add-noticia:active {
+  box-shadow: 3px 2px 0px -1px #332b00;
+}
+
+/* Notícias */
+
+.noticias {
+  margin-top: 100px;
+}
+
+.noticia {
+  padding: 25px;
+  height: auto;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(19, 19, 31, 0.05);
+  border-radius: 5px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.data-noticia {
+  font-size: 0.875em;
+  color: #b6b6b6;
+}
+
+.titulo-noticia {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 1.625em;
+  color: #313131;
+}
+
+.texto-noticia {
+  font-size: 1.125em;
+  color: #b6b6b6;
+}
+
+@media (max-width: 700px) {
+  .noticias {
+    margin-top: 50px;
+  }
+
+  .noticia {
+    margin-bottom: 25px;
+  }
+
+  .titulo-noticia {
+    font-size: 1.125em;
+  }
+  .texto-noticia {
+    font-size: 0.875em;
+  }
+}
+
+/* Modal */
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
+  z-index: 200;
+  animation: modal 0.4s ease;
+  padding: 0 10px;
+}
+
+@keyframes modal {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.modal.modal-ativo {
+  display: flex;
+}
+
+.base-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.base-modal label {
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+}
+
+#titulo-noticia {
+  padding: 0 10px;
+  height: 50px;
+  width: 400px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 4px 3px 6px 0px rgba(0, 0, 0, 0.32);
+  margin-bottom: 20px;
+  font-size: 1.125em;
+  color: #252525;
+  font-weight: 700;
+}
+
+#texto-noticia {
+  padding: 10px 60px 10px 10px;
+  width: 400px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  resize: none;
+  box-shadow: 4px 3px 6px 0px rgba(0, 0, 0, 0.32);
+  margin-bottom: 20px;
+  font-size: 1.125em;
+  color: #252525;
+  font-weight: 700;
+}
+
+.data-atual {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 4px 3px 6px 0px rgba(0, 0, 0, 0.32);
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.enviar-noticia {
+  padding: 10px 125px;
+  font-size: 2em;
+  font-weight: 900;
+  font-style: italic;
+  cursor: pointer;
+  border: 2px solid #332b00;
+  border-radius: 5px;
+  box-shadow: 5px 4px 0px -1px #332b00;
+  transition: 0.3s;
+}
+
+.enviar-noticia:hover {
+  background: #fff;
+}
+
+.enviar-noticia:active {
+  box-shadow: 3px 2px 0px -1px #332b00;
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 2em;
+  font-weight: 900;
+  padding: 0 10px;
+  background: #e64b3c;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .base-modal label {
+    font-size: 1.562em;
+  }
+
+  #titulo-noticia,
+  #texto-noticia {
+    width: 300px;
+  }
+
+  .enviar-noticia {
+    padding: 10px 75px;
+  }
+
+  .fechar-modal {
+    top: 5%;
+    right: 5%;
+  }
+}
+
+/* Caixa Pesquisa */
+
+.caixa-pesquisa {
+  margin-top: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.pesquisar {
+  color: #fff;
+  width: 100%;
+  padding: 22px 60px 22px 60px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  border: none;
+}
+
+.pesquisar::placeholder {
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.caixa-pesquisa > img {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+}
+
+/* Botão Like */
+
+.like::after {
+  content: "❤";
+  color: #d8d8d8;
+  font-size: 25px;
+  position: absolute;
+  right: 3%;
+  top: 10%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.like.like-ativo::after {
+  content: "❤";
+  font-size: 25px;
+  position: absolute;
+  color: #ff0000;
+  right: 3%;
+  top: 10%;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .like::after,
+  .like.like-ativo::after {
+    font-size: 20px;
+  }
+}

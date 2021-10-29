@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Blog</title>
+</head>
+
+<body>
+  <!-- Modal -->
+  <section class="modal">
+    <form>
+      <div class="base-modal">
+        <div class="fechar-modal">X</div>
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo-noticia">
+        <label for="noticia">Notícia</label>
+        <textarea id="texto-noticia" cols="90" rows="5"></textarea>
+        <input class="data-atual" type="date" min="2021-10-29">
+        <button type="button" class="enviar-noticia" onClick="window.location.reload()">Adicionar</button>
+      </div>
+    </form>
+  </section>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <h2 class="logo">Blog</h2>
+      <button class="add-noticia">Criar Notícia</button>
+    </nav>
+    <div class="caixa-pesquisa container">
+      <input type="text" class="pesquisar" onkeyup="pesquisarNoticia()" placeholder="Pesquisar no Blog">
+      <img src="img/lupa.svg" alt="Lupa Pesquisa">
+    </div>
+  </header>
+  <!-- Notícias -->
+  <section class="noticias container">
+    <div class="noticia">
+      <span class="data-noticia">24 de Outubro, 2021</span>
+      <button class="like"></button>
+      <h1 class="titulo-noticia">Agora é oficial: o Windows 11 está vindo</h1>
+      <p class="texto-noticia">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ullam, quos modi minus incidunt libero optio facilis eveniet id itaque.</p>
+    </div>
+    <div class="noticia">
+      <span class="data-noticia">24 de Outubro, 2021</span>
+      <button class="like"></button>
+      <h1 class="titulo-noticia">Tim Berners-Lee vai leiloar código-fonte da web</h1>
+      <p class="texto-noticia">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis. Praesent et auctor justo. Vestibulum nisl orci, lacinia venenatis leo sit amet, pulvinar tincidunt risus. Phasellus nisl dui, cursus a lectus et, interdum ullamcorper libero.</p>
+    </div>
+    <div class="noticia">
+      <span class="data-noticia">24 de Outubro, 2021</span>
+      <button class="like"></button>
+      <h1 class="titulo-noticia">Tem Firefox novo no pedaço e você vai querer migrar</h1>
+      <p class="texto-noticia">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est.</p>
+    </div>
+    <div class="noticia">
+      <span class="data-noticia">24 de Outubro, 2021</span>
+      <button class="like"></button>
+      <h1 class="titulo-noticia">John McAfee, criador do antivírus McAfee, morre</h1>
+      <p class="texto-noticia">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis. Praesent et auctor justo. Vestibulum nisl orci, lacinia venenatis leo sit amet, pulvinar tincidunt risus. Phasellus nisl dui, cursus a lectus et, interdum ullamcorper libero.</p>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
